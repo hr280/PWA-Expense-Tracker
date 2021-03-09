@@ -39,5 +39,5 @@ jobs:
     
     - name: deploying on surge
         
-      - name: Deploying using surge
-        run: surge ./build hrpwaet.surge.sh ${{ secrets.SURGE_TOKEN }}
+    - name: Deploying using surge
+      run: surge ./build hrpwaet.surge.sh ${{ secrets.SURGE_TOKEN }}
