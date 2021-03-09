@@ -35,4 +35,4 @@ jobs:
 
         
       - name: Deploying using surge
-        run: surge hrpwaet.surge.sh ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build http://hrpwaet.surge.sh/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
