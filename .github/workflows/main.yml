@@ -11,24 +11,24 @@ on:
 jobs:
   
   build:
-    
+      
     runs-on: ubuntu-latest
 
     steps:
 
-      - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2-beta
         with:
-        node-version: ${{ matrix.node-version }}
+          version: 14.15
 
       - name: GitHub Action for Yarn  
         uses: Borales/actions-yarn@v2.3.0
         with:
           cmd: install   
-           
+
       - name: Creating build 
-        run: yarn build
+        run: npm build
 
       - name: installing surge
         run: npm install -g surge
