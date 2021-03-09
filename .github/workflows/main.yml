@@ -33,6 +33,7 @@ jobs:
 
       - name: installing surge
         run: npm install -g surge
+
         
       - name: Deploying using surge
         run: surge ./build hrpwaet.surge.sh ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
